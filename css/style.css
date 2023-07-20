@@ -51,7 +51,7 @@ button{
 }
 
 #gambarHasil{
-  grid-area: 'img';
+  grid-area: img;
   margin: auto;
   border-radius: 15px;
 }
