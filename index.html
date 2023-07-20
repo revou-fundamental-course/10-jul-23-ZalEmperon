@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="asset/font/Inter.ttf" />
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico">
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center">KALKULATOR BMI</h1>
+      <p style="text-align: justify">
+        Hasil perhitungan yang dilakukan dapat menjadi panduan, tetapi tetap
+        konsultasikan dengan ahli kesehatan untuk mendapatkan penilaian yang
+        lebih akurat dan jelas tentang kesehatan dan rekomendasi yang sesuai
+        untuk mencapai kehidupan yang sehat.
+      </p>
+      <form class="bigbox" id="formBmi" method="post" autocomplete="off">
+        <div class="marginAB">
+          <label for="gender"><b>Jenis Kelamin</b></label
+          ><br /><br />
+          <input
+            type="radio"
+            name="gender"
+            id="gender"
+            value="pria"
+            required
+            oninvalid="setCustomValidity('Mohon Masukan Gender!')"
+            oninput="setCustomValidity('')"
+          />
+          <label for="pria">Pria</label>
+          <input type="radio" name="gender" id="gender" value="wanita" />
+          <label for="wanita">Wanita</label><br />
+        </div>
+        <div class="marginAB">
+          <label for="beratbdn"><b>Berat Badan (KG)</b></label
+          ><br /><br />
+          <input
+            type="number"
+            id="berat"
+            placeholder="Isi berat badan disini"
+            class="inputForm"
+            required
+            oninvalid="setCustomValidity('Mohon Masukan Berat Badan!')"
+            oninput="setCustomValidity('')"
+          />
+        </div>
+        <div class="marginAB">
+          <label for="tinggibdn"><b>Tinggi Badan (CM)</b></label
+          ><br /><br />
+          <input
+            type="number"
+            id="tinggi"
+            placeholder="Isi Tinggi disini"
+            class="inputForm"
+            required
+            oninvalid="setCustomValidity('Mohon Masukan Tinggi Badan!')"
+            oninput="setCustomValidity('')"
+          />
+        </div>
+        <div class="marginAB">
+          <button type="submit" class="tblSubmit">Hitung Sekarang</button>
+          <button type="reset" class="tblReset" onclick="resetBMI();">
+            Reset Input
+          </button>
+        </div>
+      </form>
+      <div id="nampil" class="bigbox">
+        <img src="asset/img/pria.png" id="gambarHasil" />
+        <div style="grid-area: desc; padding: 15px">
+          <p id="skorHasil" class="marginAB">nemo</p>
+          <p id="teksHasil">nemo</p>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

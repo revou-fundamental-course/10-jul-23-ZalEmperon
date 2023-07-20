@@ -1,0 +1,84 @@
+body{
+  font-family: 'Inter';
+  background-color: rgb(41, 50, 65);
+  color: rgb(224, 251, 252);
+  padding: 20px 0;
+}
+
+button{
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container{
+  width: 50%;
+  margin: auto;
+}
+
+.bigbox{
+  padding: 10px;
+  background-color: rgb(238, 108, 77);
+  border-radius: 10px;
+  margin-block: 10px;;
+}
+
+.marginAB{
+  margin: 15px 0px;
+}
+
+.tblSubmit{
+  background-color: rgb(245, 213, 92);
+}
+.tblReset{
+  background-color: rgb(60, 174, 164);
+  margin-left: 15px;
+}
+
+.inputForm{
+  width: 85%;
+  height: 20px;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+}
+
+#nampil{
+  display: none;
+  grid-template-areas: 'img desc desc desc';
+}
+
+#gambarHasil{
+  grid-area: 'img';
+  margin: auto;
+  border-radius: 15px;
+}
+
+#skorHasil{
+  text-align: start;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  button{
+    padding: 10px 15px;
+  }
+  .container{
+    width: 90%;
+  }
+  .container h1{
+    font-size: 1.8em;
+  }
+  .tblReset{
+    margin-left: 0;
+    float: right;
+  }
+  #skorHasil{
+    text-align: center;
+  }
+  #nampil{
+    grid-template-areas: 'img img img' 'desc desc desc';
+  }
+}
